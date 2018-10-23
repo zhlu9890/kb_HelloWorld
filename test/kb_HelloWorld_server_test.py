@@ -87,3 +87,8 @@ class kb_HelloWorldTest(unittest.TestCase):
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
         pass
+    def test_printhelloworld(self):
+        result = self.getImpl().printhelloworld(self.getContext(), {
+            'phrase': "HelloWorld"
+        })[0]
+        print "TEST file and your phrase is " + result['phrase'] + "\n"

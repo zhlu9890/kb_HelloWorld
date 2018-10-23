@@ -29,11 +29,11 @@ suggestions:
 # Configure the display and description of parameters
 #
 parameters :
-    parameter_1 :
+    phrase :
         ui-name : |
-            First parameter
+            Phrase
         short-hint : |
-            The first parameter
+            Phrase
         long-hint  : |
             The first parameter that needs to be entered to drive the method. This might be the first of many.
 

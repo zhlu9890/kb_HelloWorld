@@ -11,7 +11,7 @@
     },
     "parameters": [ 
         {
-            "id": "parameter_1",
+            "id": "phrase",
             "optional": true,
             "advanced": false,
             "allow_multiple": false,
@@ -26,30 +26,14 @@
         "service-mapping": {
             "url": "",
             "name": "kb_HelloWorld",
-            "method": "your_method",
+            "method": "printhelloworld",
             "input_mapping": [
                 {
-                    "narrative_system_variable": "workspace",
-                    "target_argument_position": 0
-                },
-                {
-                    "input_parameter": "parameter_1",
-                    "target_argument_position": 1
+                    "input_parameter": "phrase",
+                    "target_property": "phrase"
                 }
             ],
             "output_mapping": [
-                {
-                    "service_method_output_path": [0],
-                    "target_property": "output"
-                },
-                {
-                    "input_parameter": "parameter_1",
-                    "target_property": "input"
-                },
-                {
-                    "narrative_system_variable": "workspace",
-                    "target_property": "workspaceName"
-                }
             ]
         }
     },

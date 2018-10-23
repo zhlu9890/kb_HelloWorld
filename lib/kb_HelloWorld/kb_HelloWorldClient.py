@@ -33,6 +33,17 @@ class kb_HelloWorld(object):
             trust_all_ssl_certificates=trust_all_ssl_certificates,
             auth_svc=auth_svc)
 
+    def printhelloworld(self, params, context=None):
+        """
+        :param params: instance of type "InParams" (Insert your typespec
+           information here.) -> structure: parameter "phrase" of String
+        :returns: instance of type "OutParams" -> structure: parameter
+           "phrase" of String
+        """
+        return self._client.call_method(
+            'kb_HelloWorld.printhelloworld',
+            [params], self._service_ver, context)
+
     def status(self, context=None):
         return self._client.call_method('kb_HelloWorld.status',
                                         [], self._service_ver, context)
